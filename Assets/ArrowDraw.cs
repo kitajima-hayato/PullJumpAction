@@ -23,6 +23,7 @@ public class ArrowDraw : MonoBehaviour
         }
         if (Input.GetMouseButton(0))
         {
+            arrowImage.gameObject.SetActive(true);
             Vector3 dist = clickPosition - Input.mousePosition;
 
             //
@@ -38,6 +39,10 @@ public class ArrowDraw : MonoBehaviour
             //
             arrowImage.rectTransform.sizeDelta = new Vector2(size, size);
             //Debug.Log(dist);
+        }
+        else
+        {
+            arrowImage.gameObject.SetActive(false);
         }
         
 
